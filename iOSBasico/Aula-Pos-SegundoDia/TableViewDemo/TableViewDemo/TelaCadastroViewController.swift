@@ -37,7 +37,8 @@ class TelaCadastroViewController: UIViewController {
         carros.append(carro)
         marcas.append(marca)
         
-       
+        // dica do site:
+        // pass variable value by popToViewController in swift https://stackoverflow.com/questions/42669289/pass-variable-value-by-poptoviewcontroller-in-swift
         if let myController  = self.navigationController?.viewControllers[0] as? Tela1TableViewController
         {
             myController.carros = carros
