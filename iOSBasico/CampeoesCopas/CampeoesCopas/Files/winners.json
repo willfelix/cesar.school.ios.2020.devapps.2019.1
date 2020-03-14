@@ -31,7 +31,7 @@
 				"stage": "Oitavas de Final",
 				"games": [{
 					"home": "Alemanha",
-					"away": "Argélia",
+					"away": "Argelia",
 					"score": "2 x 1",
 					"date": "30 de junho"
 				}]
@@ -39,7 +39,7 @@
 			{
 				"stage": "Quartas de Final",
 				"games": [{
-					"home": "França",
+					"home": "Franca",
 					"away": "Alemanha",
 					"score": "0 x 1",
 					"date": "4 de julho"
@@ -67,7 +67,7 @@
 	},
 	{
 		"year": 2010,
-		"country": "África do Sul",
+		"country": "Africa do Sul",
 		"winner": "Espanha",
 		"vice": "Holanda",
 		"winnerScore": "1",
@@ -76,7 +76,7 @@
 				"stage": "Fase de grupos",
 				"games": [{
 						"home": "Espanha",
-						"away": "Suíça",
+						"away": "Suica",
 						"score": "0 x 1",
 						"date": "16 de junho"
 					},
@@ -135,27 +135,27 @@
 	{
 		"year": 2006,
 		"country": "Alemanha",
-		"winner": "Itália",
-		"vice": "França",
+		"winner": "Italia",
+		"vice": "Franca",
 		"winnerScore": "1 (5)",
 		"viceScore": "1 (3)",
 		"matches": [{
 				"stage": "Fase de grupos",
 				"games": [{
-						"home": "Itália",
+						"home": "Italia",
 						"away": "Gana",
 						"score": "2 x 0",
 						"date": "12 de junho"
 					},
 					{
-						"home": "Itália",
+						"home": "Italia",
 						"away": "Estados Unidos",
 						"score": "1 x 1",
 						"date": "17 de junho"
 					},
 					{
 						"home": "República Tcheca",
-						"away": "Itália",
+						"away": "Italia",
 						"score": "0 x 2",
 						"date": "22 de junho"
 					}
@@ -164,8 +164,8 @@
 			{
 				"stage": "Oitavas de Final",
 				"games": [{
-					"home": "Itália",
-					"away": "Austrália",
+					"home": "Italia",
+					"away": "Australia",
 					"score": "1 x 0",
 					"date": "26 de junho"
 				}]
@@ -173,8 +173,8 @@
 			{
 				"stage": "Quartas de Final",
 				"games": [{
-					"home": "Itália",
-					"away": "Ucrânia",
+					"home": "Italia",
+					"away": "Ucrania",
 					"score": "3 x 0",
 					"date": "30 de junho"
 				}]
@@ -183,7 +183,7 @@
 				"stage": "Semifinais",
 				"games": [{
 					"home": "Alemanha",
-					"away": "Itália",
+					"away": "Italia",
 					"score": "0 x 2",
 					"date": "4 de julho"
 				}]
@@ -191,8 +191,8 @@
 			{
 				"stage": "Final",
 				"games": [{
-					"home": "Itália",
-					"away": "França",
+					"home": "Italia",
+					"away": "Franca",
 					"score": "(5) 1 x 1 (3)",
 					"date": "9 de julho"
 				}]
@@ -201,7 +201,7 @@
 	},
 	{
 		"year": 2002,
-		"country": "Coréia do Sul e Japão",
+		"country": "Coreia do Sul e Japao",
 		"winner": "Brasil",
 		"vice": "Alemanha",
 		"winnerScore": "2",
@@ -232,7 +232,7 @@
 				"stage": "Oitavas de Final",
 				"games": [{
 					"home": "Brasil",
-					"away": "Bélgica",
+					"away": "Belgica",
 					"score": "2 x 0",
 					"date": "17 de junho"
 				}]
@@ -268,27 +268,27 @@
 	},
 	{
 		"year": 1998,
-		"country": "França",
-		"winner": "França",
+		"country": "Franca",
+		"winner": "Franca",
 		"vice": "Brasil",
 		"winnerScore": "3",
 		"viceScore": "0",
 		"matches": [{
 				"stage": "Fase de grupos",
 				"games": [{
-						"home": "França",
-						"away": "África do Sul",
+						"home": "Franca",
+						"away": "Africa do Sul",
 						"score": "3 x 0",
 						"date": "12 de junho"
 					},
 					{
-						"home": "França",
-						"away": "Arábia Saudita",
+						"home": "Franca",
+						"away": "Arabia Saudita",
 						"score": "4 x 0",
 						"date": "18 de junho"
 					},
 					{
-						"home": "França",
+						"home": "Franca",
 						"away": "Dinamarca",
 						"score": "2 x 1",
 						"date": "24 de junho"
@@ -298,7 +298,7 @@
 			{
 				"stage": "Oitavas de Final",
 				"games": [{
-					"home": "França",
+					"home": "Franca",
 					"away": "Paraguai",
 					"score": "1 x 0",
 					"date": "28 de junho"
@@ -307,8 +307,8 @@
 			{
 				"stage": "Quartas de Final",
 				"games": [{
-					"home": "Itália",
-					"away": "França",
+					"home": "Italia",
+					"away": "Franca",
 					"score": "(3) 0 x 0 (4)",
 					"date": "3 de julho"
 				}]
@@ -316,8 +316,8 @@
 			{
 				"stage": "Semifinais",
 				"games": [{
-					"home": "França",
-					"away": "Croácia",
+					"home": "Franca",
+					"away": "Croacia",
 					"score": "2 x 1",
 					"date": "8 de julho"
 				}]
@@ -326,7 +326,7 @@
 				"stage": "Final",
 				"games": [{
 					"home": "Brasil",
-					"away": "França",
+					"away": "Franca",
 					"score": "0 x 3",
 					"date": "12 de junho"
 				}]
@@ -337,7 +337,7 @@
 		"year": 1994,
 		"country": "Estados Unidos",
 		"winner": "Brasil",
-		"vice": "Itália",
+		"vice": "Italia",
 		"winnerScore": "0 (3)",
 		"viceScore": "0 (2)",
 		"matches": [{
@@ -356,7 +356,7 @@
 					},
 					{
 						"home": "Brasil",
-						"away": "Suécia",
+						"away": "Suecia",
 						"score": "1 x 1",
 						"date": "28 de junho"
 					}
@@ -383,7 +383,7 @@
 			{
 				"stage": "Semifinais",
 				"games": [{
-					"home": "Suécia",
+					"home": "Suecia",
 					"away": "Brasil",
 					"score": "0 x 1",
 					"date": "13 de julho"
@@ -393,7 +393,7 @@
 				"stage": "Final",
 				"games": [{
 					"home": "Brasil",
-					"away": "Itália",
+					"away": "Italia",
 					"score": "(3) 0 x 0 (2)",
 					"date": "17 de julho"
 				}]
@@ -402,7 +402,7 @@
 	},
 	{
 		"year": 1990,
-		"country": "Itália",
+		"country": "Italia",
 		"winner": "Alemanha Ocidental",
 		"vice": "Argentina",
 		"winnerScore": "1",
@@ -411,13 +411,13 @@
 				"stage": "Fase de grupos",
 				"games": [{
 						"home": "Alemanha Ocidental",
-						"away": "Iugoslávia",
+						"away": "Iugoslavia",
 						"score": "4 x 1",
 						"date": "10 de junho"
 					},
 					{
 						"home": "Alemanha Ocidental",
-						"away": "Emirados Árabes",
+						"away": "Emirados arabes",
 						"score": "5 x 1",
 						"date": "15 de junho"
 					},
@@ -441,7 +441,7 @@
 			{
 				"stage": "Quartas de Final",
 				"games": [{
-					"home": "Tchecoslováquia",
+					"home": "Tchecoslovaquia",
 					"away": "Alemanha Ocidental",
 					"score": "0 x 1",
 					"date": "1 de julho"
@@ -469,7 +469,7 @@
 	},
 	{
 		"year": 1986,
-		"country": "México",
+		"country": "Mexico",
 		"winner": "Argentina",
 		"vice": "Alemanha Ocidental",
 		"winnerScore": "3",
@@ -478,19 +478,19 @@
 				"stage": "Fase de grupos",
 				"games": [{
 						"home": "Argentina",
-						"away": "Coréia do Sul",
+						"away": "Coreia do Sul",
 						"score": "3 x 1",
 						"date": "2 de junho"
 					},
 					{
-						"home": "Itália",
+						"home": "Italia",
 						"away": "Argentina",
 						"score": "1 x 1",
 						"date": "5 de junho"
 					},
 					{
 						"home": "Argentina",
-						"away": "Bulgária",
+						"away": "Bulgaria",
 						"score": "2 x 0",
 						"date": "10 de junho"
 					}
@@ -518,7 +518,7 @@
 				"stage": "Semifinais",
 				"games": [{
 					"home": "Argentina",
-					"away": "Bélgica",
+					"away": "Belgica",
 					"score": "2 x 0",
 					"date": "25 de junho"
 				}]
@@ -537,26 +537,26 @@
 	{
 		"year": 1982,
 		"country": "Espanha",
-		"winner": "Itália",
+		"winner": "Italia",
 		"vice": "Alemanha Ocidental",
 		"winnerScore": "3",
 		"viceScore": "1",
 		"matches": [{
 				"stage": "Fase de Grupos",
 				"games": [{
-						"home": "Itália",
-						"away": "Polônia",
+						"home": "Italia",
+						"away": "Polonia",
 						"score": "0 x 0",
 						"date": "14 de junho"
 					},
 					{
-						"home": "Itália",
+						"home": "Italia",
 						"away": "Peru",
 						"score": "1 x 1",
 						"date": "18 de junho"
 					},
 					{
-						"home": "Itália",
+						"home": "Italia",
 						"away": "Camarões",
 						"score": "1 x 1",
 						"date": "23 de junho"
@@ -566,13 +566,13 @@
 			{
 				"stage": "Segunda Fase",
 				"games": [{
-						"home": "Itália",
+						"home": "Italia",
 						"away": "Argentina",
 						"score": "2 x 1",
 						"date": "29 de junho"
 					},
 					{
-						"home": "Itália",
+						"home": "Italia",
 						"away": "Brasil",
 						"score": "3 x 2",
 						"date": "5 de julho"
@@ -582,8 +582,8 @@
 			{
 				"stage": "Semifinais",
 				"games": [{
-					"home": "Polônia",
-					"away": "Itália",
+					"home": "Polonia",
+					"away": "Italia",
 					"score": "0 x 2",
 					"date": "8 de julho"
 				}]
@@ -591,7 +591,7 @@
 			{
 				"stage": "Final",
 				"games": [{
-					"home": "Itália",
+					"home": "Italia",
 					"away": "Alemanha Ocidental",
 					"score": "3 x 1",
 					"date": "11 de julho"
@@ -616,13 +616,13 @@
 					},
 					{
 						"home": "Argentina",
-						"away": "França",
+						"away": "Franca",
 						"score": "2 x 1",
 						"date": "6 de junho"
 					},
 					{
 						"home": "Argentina",
-						"away": "Itália",
+						"away": "Italia",
 						"score": "0 x 1",
 						"date": "10 de junho"
 					}
@@ -632,7 +632,7 @@
 				"stage": "Segunda Fase",
 				"games": [{
 						"home": "Argentina",
-						"away": "Polônia",
+						"away": "Polonia",
 						"score": "2 x 0",
 						"date": "14 de junho"
 					},
@@ -677,7 +677,7 @@
 						"date": "14 de junho"
 					},
 					{
-						"home": "Austrália",
+						"home": "Australia",
 						"away": "Alemanha Ocidental",
 						"score": "0 x 3",
 						"date": "18 de junho"
@@ -693,19 +693,19 @@
 			{
 				"stage": "Segunda Fase",
 				"games": [{
-						"home": "Iugoslávia",
+						"home": "Iugoslavia",
 						"away": "Alemanha Ocidental",
 						"score": "0 x 2",
 						"date": "26 de junho"
 					},
 					{
 						"home": "Alemanha Ocidental",
-						"away": "Suécia",
+						"away": "Suecia",
 						"score": "4 x 2",
 						"date": "30 de julho"
 					},
 					{
-						"home": "Polônia",
+						"home": "Polonia",
 						"away": "Alemanha Ocidental",
 						"score": "0 x 1",
 						"date": "3 de julho"
@@ -725,16 +725,16 @@
 	},
 	{
 		"year": 1970,
-		"country": "México",
+		"country": "Mexico",
 		"winner": "Brasil",
-		"vice": "Itália",
+		"vice": "Italia",
 		"winnerScore": "4",
 		"viceScore": "1",
 		"matches": [{
 				"stage": "Fase de grupos",
 				"games": [{
 						"home": "Brasil",
-						"away": "Tchecoslováquia",
+						"away": "Tchecoslovaquia",
 						"score": "4 x 1",
 						"date": "3 de junho"
 					},
@@ -774,7 +774,7 @@
 				"stage": "Final",
 				"games": [{
 					"home": "Brasil",
-					"away": "Itália",
+					"away": "Italia",
 					"score": "4 x 1",
 					"date": "21 de junho"
 				}]
@@ -798,13 +798,13 @@
 					},
 					{
 						"home": "Inglaterra",
-						"away": "México",
+						"away": "Mexico",
 						"score": "2 x 0",
 						"date": "16 de julho"
 					},
 					{
 						"home": "Inglaterra",
-						"away": "França",
+						"away": "Franca",
 						"score": "2 x 0",
 						"date": "20 de julho"
 					}
@@ -843,20 +843,20 @@
 		"year": 1962,
 		"country": "Chile",
 		"winner": "Brasil",
-		"vice": "Tchecoslováquia",
+		"vice": "Tchecoslovaquia",
 		"winnerScore": "3",
 		"viceScore": "1",
 		"matches": [{
 				"stage": "Fase de grupos",
 				"games": [{
 						"home": "Brasil",
-						"away": "México",
+						"away": "Mexico",
 						"score": "2 x 0",
 						"date": "30 de maio"
 					},
 					{
 						"home": "Brasil",
-						"away": "Tchecoslováquia",
+						"away": "Tchecoslovaquia",
 						"score": "0 x 0",
 						"date": "2 de junho"
 					},
@@ -890,7 +890,7 @@
 				"stage": "Final",
 				"games": [{
 					"home": "Brasil",
-					"away": "Tchecoslováquia",
+					"away": "Tchecoslovaquia",
 					"score": "3 x 1",
 					"date": "17 de junho"
 				}]
@@ -899,16 +899,16 @@
 	},
 	{
 		"year": 1958,
-		"country": "Suécia",
+		"country": "Suecia",
 		"winner": "Brasil",
-		"vice": "Suécia",
+		"vice": "Suecia",
 		"winnerScore": "5",
 		"viceScore": "2",
 		"matches": [{
 				"stage": "Fase de grupos",
 				"games": [{
 						"home": "Brasil",
-						"away": "Áustria",
+						"away": "austria",
 						"score": "3 x 0",
 						"date": "8 de junho"
 					},
@@ -920,7 +920,7 @@
 					},
 					{
 						"home": "Brasil",
-						"away": "União Soviética",
+						"away": "Uniao Sovietica",
 						"score": "2 x 0",
 						"date": "15 de junho"
 					}
@@ -930,7 +930,7 @@
 				"stage": "Quartas de Final",
 				"games": [{
 					"home": "Brasil",
-					"away": "País de Gales",
+					"away": "Pais de Gales",
 					"score": "1 x 0",
 					"date": "19 de junho"
 				}]
@@ -939,7 +939,7 @@
 				"stage": "Semifinais",
 				"games": [{
 					"home": "Brasil",
-					"away": "França",
+					"away": "Franca",
 					"score": "5 x 2",
 					"date": "24 de junho"
 				}]
@@ -948,7 +948,7 @@
 				"stage": "Final",
 				"games": [{
 					"home": "Brasil",
-					"away": "Suécia",
+					"away": "Suecia",
 					"score": "5 x 2",
 					"date": "29 de junho"
 				}]
@@ -957,7 +957,7 @@
 	},
 	{
 		"year": 1954,
-		"country": "Suíça",
+		"country": "Suica",
 		"winner": "Alemanha Ocidental",
 		"vice": "Hungria",
 		"winnerScore": "3",
@@ -988,7 +988,7 @@
 				"stage": "Quartas de Final",
 				"games": [{
 					"home": "Alemanha Ocidental",
-					"away": "Iugoslávia",
+					"away": "Iugoslavia",
 					"score": "2 x 0",
 					"date": "27 de junho"
 				}]
@@ -997,7 +997,7 @@
 				"stage": "Semifinais",
 				"games": [{
 					"home": "Alemanha Ocidental",
-					"away": "Áustria",
+					"away": "austria",
 					"score": "6 x 1",
 					"date": "30 de junho"
 				}]
@@ -1024,19 +1024,19 @@
 				"stage": "Fase de grupos",
 				"games": [{
 						"home": "Brasil",
-						"away": "México",
+						"away": "Mexico",
 						"score": "4 x 0",
 						"date": "24 de junho"
 					},
 					{
 						"home": "Brasil",
-						"away": "Suíça",
+						"away": "Suica",
 						"score": "2 x 2",
 						"date": "28 de junho"
 					},
 					{
 						"home": "Brasil",
-						"away": "Iugoslávia",
+						"away": "Iugoslavia",
 						"score": "2 x 0",
 						"date": "1 de julho"
 					}
@@ -1046,7 +1046,7 @@
 				"stage": "Quadrangular Final",
 				"games": [{
 						"home": "Brasil",
-						"away": "Suécia",
+						"away": "Suecia",
 						"score": "7 x 1",
 						"date": "9 de julho"
 					},
@@ -1068,15 +1068,15 @@
 	},
 	{
 		"year": 1938,
-		"country": "França",
-		"winner": "Itália",
+		"country": "Franca",
+		"winner": "Italia",
 		"vice": "Hungria",
 		"winnerScore": "4",
 		"viceScore": "2",
 		"matches": [{
 				"stage": "Oitavas de Final",
 				"games": [{
-					"home": "Itália",
+					"home": "Italia",
 					"away": "Noruega",
 					"score": "2 x 1",
 					"date": "5 de junho"
@@ -1085,8 +1085,8 @@
 			{
 				"stage": "Quartas de Final",
 				"games": [{
-					"home": "França",
-					"away": "Itália",
+					"home": "Franca",
+					"away": "Italia",
 					"score": "1 x 3",
 					"date": "12 de junho"
 				}]
@@ -1094,7 +1094,7 @@
 			{
 				"stage": "Semifinais",
 				"games": [{
-					"home": "Itália",
+					"home": "Italia",
 					"away": "Brasil",
 					"score": "2 x 1",
 					"date": "16 de junho"
@@ -1103,7 +1103,7 @@
 				"stage": "Final",
 				"games": [{
 					"home": "Hungria",
-					"away": "Itália",
+					"away": "Italia",
 					"score": "2 x 4",
 					"date": "19 de junho"
 				}]
@@ -1112,15 +1112,15 @@
 	},
 	{
 		"year": 1934,
-		"country": "Itália",
-		"winner": "Itália",
-		"vice": "Tchecoslováquia",
+		"country": "Italia",
+		"winner": "Italia",
+		"vice": "Tchecoslovaquia",
 		"winnerScore": "2",
 		"viceScore": "1",
 		"matches": [{
 				"stage": "Oitavas de Final",
 				"games": [{
-					"home": "Itália",
+					"home": "Italia",
 					"away": "Estados Unidos",
 					"score": "7 x 1",
 					"date": "27 de maio"
@@ -1129,13 +1129,13 @@
 			{
 				"stage": "Quartas de Final",
 				"games": [{
-						"home": "Itália",
+						"home": "Italia",
 						"away": "Espanha",
 						"score": "1 x 1",
 						"date": "31 de maio"
 					},
 					{
-						"home": "Itália",
+						"home": "Italia",
 						"away": "Espanha",
 						"score": "1 x 0",
 						"date": "1 de junho"
@@ -1145,16 +1145,16 @@
 			{
 				"stage": "Semifinais",
 				"games": [{
-					"home": "Itália",
-					"away": "Áustria",
+					"home": "Italia",
+					"away": "austria",
 					"score": "1 x 0",
 					"date": "3 de junho"
 				}]
 			}, {
 				"stage": "Final",
 				"games": [{
-					"home": "Itália",
-					"away": "Tchecoslováquia",
+					"home": "Italia",
+					"away": "Tchecoslovaquia",
 					"score": "2 x 1",
 					"date": "10 de junho"
 				}]
@@ -1188,7 +1188,7 @@
 				"stage": "Semifinais",
 				"games": [{
 					"home": "Uruguai",
-					"away": "Iugoslávia",
+					"away": "Iugoslavia",
 					"score": "6 x 1",
 					"date": "27 de julho"
 				}]
