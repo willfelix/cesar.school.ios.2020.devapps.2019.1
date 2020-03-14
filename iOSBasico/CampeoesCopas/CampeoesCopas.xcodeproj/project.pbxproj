@@ -16,6 +16,7 @@
 		574BF544240AF1B1007AF402 /* WinnersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574BF543240AF1B1007AF402 /* WinnersTableViewController.swift */; };
 		574BF546240AF1FF007AF402 /* WorldCupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574BF545240AF1FF007AF402 /* WorldCupViewController.swift */; };
 		574BF548240AF254007AF402 /* WorldCup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574BF547240AF254007AF402 /* WorldCup.swift */; };
+		EDDB8D0C241C5E7A00971B84 /* WorldCupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB8D0B241C5E7A00971B84 /* WorldCupTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		574BF543240AF1B1007AF402 /* WinnersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnersTableViewController.swift; sourceTree = "<group>"; };
 		574BF545240AF1FF007AF402 /* WorldCupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCupViewController.swift; sourceTree = "<group>"; };
 		574BF547240AF254007AF402 /* WorldCup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCup.swift; sourceTree = "<group>"; };
+		EDDB8D0B241C5E7A00971B84 /* WorldCupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCupTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				574BF543240AF1B1007AF402 /* WinnersTableViewController.swift */,
 				574BF545240AF1FF007AF402 /* WorldCupViewController.swift */,
 				574BF530240AEBB1007AF402 /* Main.storyboard */,
+				EDDB8D0B241C5E7A00971B84 /* WorldCupTableViewCell.swift */,
 				574BF547240AF254007AF402 /* WorldCup.swift */,
 				574BF535240AEBB4007AF402 /* LaunchScreen.storyboard */,
 				574BF533240AEBB4007AF402 /* Assets.xcassets */,
@@ -159,6 +162,7 @@
 				574BF544240AF1B1007AF402 /* WinnersTableViewController.swift in Sources */,
 				574BF52B240AEBB1007AF402 /* AppDelegate.swift in Sources */,
 				574BF548240AF254007AF402 /* WorldCup.swift in Sources */,
+				EDDB8D0C241C5E7A00971B84 /* WorldCupTableViewCell.swift in Sources */,
 				574BF546240AF1FF007AF402 /* WorldCupViewController.swift in Sources */,
 				574BF52D240AEBB1007AF402 /* SceneDelegate.swift in Sources */,
 			);
