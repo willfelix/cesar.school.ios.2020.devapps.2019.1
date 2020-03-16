@@ -17,6 +17,7 @@
 		574BF548240AF254007AF402 /* WorldCup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574BF547240AF254007AF402 /* WorldCup.swift */; };
 		EDDB8D0C241C5E7A00971B84 /* WorldCupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB8D0B241C5E7A00971B84 /* WorldCupTableViewCell.swift */; };
 		EDDB8D0E241CFF4E00971B84 /* winners.json in Resources */ = {isa = PBXBuildFile; fileRef = EDDB8D0D241CFF4E00971B84 /* winners.json */; };
+		EDDB8D10241D21F500971B84 /* GamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDDB8D0F241D21F500971B84 /* GamesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		574BF547240AF254007AF402 /* WorldCup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCup.swift; sourceTree = "<group>"; };
 		EDDB8D0B241C5E7A00971B84 /* WorldCupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCupTableViewCell.swift; sourceTree = "<group>"; };
 		EDDB8D0D241CFF4E00971B84 /* winners.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = winners.json; sourceTree = "<group>"; };
+		EDDB8D0F241D21F500971B84 /* GamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				574BF543240AF1B1007AF402 /* WinnersTableViewController.swift */,
 				574BF545240AF1FF007AF402 /* WorldCupViewController.swift */,
 				574BF530240AEBB1007AF402 /* Main.storyboard */,
+				EDDB8D0F241D21F500971B84 /* GamesTableViewCell.swift */,
 				EDDB8D0B241C5E7A00971B84 /* WorldCupTableViewCell.swift */,
 				574BF547240AF254007AF402 /* WorldCup.swift */,
 				574BF535240AEBB4007AF402 /* LaunchScreen.storyboard */,
@@ -162,6 +165,7 @@
 				574BF544240AF1B1007AF402 /* WinnersTableViewController.swift in Sources */,
 				574BF52B240AEBB1007AF402 /* AppDelegate.swift in Sources */,
 				574BF548240AF254007AF402 /* WorldCup.swift in Sources */,
+				EDDB8D10241D21F500971B84 /* GamesTableViewCell.swift in Sources */,
 				EDDB8D0C241C5E7A00971B84 /* WorldCupTableViewCell.swift in Sources */,
 				574BF546240AF1FF007AF402 /* WorldCupViewController.swift in Sources */,
 				574BF52D240AEBB1007AF402 /* SceneDelegate.swift in Sources */,
