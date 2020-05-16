@@ -37,5 +37,8 @@ class GameTableViewCell: UITableViewCell {
             ivCover.image = UIImage(named: "noCover")
         }
     }
+    
+    
+    
 
 }
