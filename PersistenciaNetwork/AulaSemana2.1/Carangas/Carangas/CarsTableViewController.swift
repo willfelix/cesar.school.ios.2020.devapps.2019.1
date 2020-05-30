@@ -13,22 +13,37 @@ class CarsTableViewController: UITableViewController {
     
     var cars: [Car] = []
     
+    
+    var label: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.textColor = UIColor(named: "main")
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        label.text = "Carregando dados..."
+        
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(loadCars), for: .valueChanged)
+        tableView.refreshControl = refreshControl
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
+    @objc fileprivate func loadCars() {
         REST.loadCars(onComplete: { (cars) in
             // sucesso
             self.cars = cars
             
             // precisa recarregar a tableview usando a main UI thread
             DispatchQueue.main.async {
-               self.tableView.reloadData()
+                
+                self.label.text = "Não existem carros cadastrados."
+                self.refreshControl?.endRefreshing()
+                
+                self.tableView.reloadData()
             }
             
         }) { (carError) in
@@ -55,7 +70,21 @@ class CarsTableViewController: UITableViewController {
             
             print(response)
             
+            DispatchQueue.main.async {
+                
+                self.label.text = "Não existem carros cadastrados."
+                self.refreshControl?.endRefreshing()
+                
+                // TODO mostrar uma alerta similar ao implementado na tela AddEditViewController
+            }
+            
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        loadCars()
     }
     
     
@@ -67,7 +96,11 @@ class CarsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        // atribui nossa label para mostrar se tem ou nao dados
+        tableView.backgroundView = cars.count == 0 ? label : nil
+                
         return cars.count
+        
     }
     
     
@@ -90,17 +123,30 @@ class CarsTableViewController: UITableViewController {
      }
      */
     
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
+    
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // 1
+            let car = cars[indexPath.row]
+            
+            REST.delete(car: car) { (success) in
+                if success {
+                                        
+                    // ATENCAO nao esquecer disso
+                    self.cars.remove(at: indexPath.row)
+                    
+                    DispatchQueue.main.async {
+                        
+                        // Delete the row from the data source
+                        tableView.deleteRows(at: [indexPath], with: .fade)
+                        
+                    }
+                }
+            }
+        }
+    }
+    
     
     /*
      // Override to support rearranging the table view.

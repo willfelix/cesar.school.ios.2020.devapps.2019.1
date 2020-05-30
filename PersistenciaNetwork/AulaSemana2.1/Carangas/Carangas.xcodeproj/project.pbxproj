@@ -16,6 +16,8 @@
 		A1B18D1B1F9C1DCF00313110 /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B18D1A1F9C1DCF00313110 /* CarViewController.swift */; };
 		EDF5FCDB2481CB4E00599C9E /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF5FCDA2481CB4E00599C9E /* Car.swift */; };
 		EDF5FCE42481CD7200599C9E /* REST.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF5FCE32481CD7200599C9E /* REST.swift */; };
+		EDF5FCE62482895900599C9E /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF5FCE52482895900599C9E /* Brand.swift */; };
+		EDF5FCE924829D4500599C9E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDF5FCE824829D4400599C9E /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		A1B18D1A1F9C1DCF00313110 /* CarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
 		EDF5FCDA2481CB4E00599C9E /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		EDF5FCE32481CD7200599C9E /* REST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REST.swift; sourceTree = "<group>"; };
+		EDF5FCE52482895900599C9E /* Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		EDF5FCE824829D4400599C9E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF5FCE924829D4500599C9E /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +53,7 @@
 			children = (
 				A1B18D031F9C1BDD00313110 /* Carangas */,
 				A1B18D021F9C1BDD00313110 /* Products */,
+				EDF5FCE724829D4400599C9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				EDF5FCDA2481CB4E00599C9E /* Car.swift */,
+				EDF5FCE52482895900599C9E /* Brand.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -98,6 +105,14 @@
 				A1B18D0D1F9C1BDD00313110 /* LaunchScreen.storyboard */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		EDF5FCE724829D4400599C9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDF5FCE824829D4400599C9E /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +191,7 @@
 				EDF5FCE42481CD7200599C9E /* REST.swift in Sources */,
 				A1B18D051F9C1BDD00313110 /* AppDelegate.swift in Sources */,
 				EDF5FCDB2481CB4E00599C9E /* Car.swift in Sources */,
+				EDF5FCE62482895900599C9E /* Brand.swift in Sources */,
 				A1B18D191F9C1DBA00313110 /* AddEditViewController.swift in Sources */,
 				A1B18D1B1F9C1DCF00313110 /* CarViewController.swift in Sources */,
 			);
