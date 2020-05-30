@@ -263,20 +263,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="xSM-Dn-jSf">
-                                <rect key="frame" x="16" y="207" width="382" height="590"/>
+                                <rect key="frame" x="16" y="206.5" width="382" height="590.5"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data lançamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcq-7c-5D3">
-                                <rect key="frame" x="16" y="170" width="382" height="21"/>
+                                <rect key="frame" x="16" y="170" width="382" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6oP-Hu-WlC">
+                                <rect key="frame" x="358" y="131.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7RB-QR-2dv"/>
+                                    <constraint firstAttribute="width" constant="40" id="I8F-UL-zYu"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="bHX-ru-4no" firstAttribute="trailing" secondItem="b2w-jd-mgL" secondAttribute="trailing" constant="16" id="4Uh-QZ-UtO"/>
                             <constraint firstItem="gcq-7c-5D3" firstAttribute="top" secondItem="YOG-FD-2rK" secondAttribute="bottom" constant="8" id="4dO-ES-n1B"/>
                             <constraint firstItem="bHX-ru-4no" firstAttribute="trailing" secondItem="YOG-FD-2rK" secondAttribute="trailing" constant="16" id="5dX-zJ-8eO"/>
+                            <constraint firstItem="bHX-ru-4no" firstAttribute="trailing" secondItem="6oP-Hu-WlC" secondAttribute="trailing" constant="16" id="9mc-BT-CdK"/>
                             <constraint firstItem="b2w-jd-mgL" firstAttribute="top" secondItem="bHX-ru-4no" secondAttribute="top" constant="16" id="EYq-Nu-iEt"/>
                             <constraint firstItem="b2w-jd-mgL" firstAttribute="leading" secondItem="bHX-ru-4no" secondAttribute="leading" constant="16" id="Jmh-fS-gpD"/>
                             <constraint firstItem="xSM-Dn-jSf" firstAttribute="top" secondItem="gcq-7c-5D3" secondAttribute="bottom" constant="16" id="PFH-kP-FSO"/>
@@ -286,6 +294,7 @@
                             <constraint firstItem="xSM-Dn-jSf" firstAttribute="leading" secondItem="bHX-ru-4no" secondAttribute="leading" constant="16" id="mJG-TN-TPg"/>
                             <constraint firstItem="bHX-ru-4no" firstAttribute="bottom" secondItem="xSM-Dn-jSf" secondAttribute="bottom" constant="16" id="smk-8A-T95"/>
                             <constraint firstItem="bHX-ru-4no" firstAttribute="trailing" secondItem="xSM-Dn-jSf" secondAttribute="trailing" constant="16" id="ye9-LD-j0t"/>
+                            <constraint firstItem="6oP-Hu-WlC" firstAttribute="centerY" secondItem="YOG-FD-2rK" secondAttribute="centerY" id="yhJ-ly-zOp"/>
                             <constraint firstItem="gcq-7c-5D3" firstAttribute="leading" secondItem="bHX-ru-4no" secondAttribute="leading" constant="16" id="yn4-lY-u7l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bHX-ru-4no"/>
@@ -298,6 +307,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="ivConsole" destination="6oP-Hu-WlC" id="xDc-jZ-yg6"/>
                         <outlet property="ivCover" destination="xSM-Dn-jSf" id="vzH-nW-qwR"/>
                         <outlet property="lbConsole" destination="YOG-FD-2rK" id="cU4-qu-abH"/>
                         <outlet property="lbReleaseDate" destination="gcq-7c-5D3" id="0fv-7b-9n7"/>
