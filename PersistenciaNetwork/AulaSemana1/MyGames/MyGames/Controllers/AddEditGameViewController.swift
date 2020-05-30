@@ -9,8 +9,7 @@
 import UIKit
 import Photos
 
-class AddEditViewController: UIViewController {
-    
+class AddEditGameViewController: UIViewController {
     
     @IBOutlet weak var tfTitle: UITextField!
     @IBOutlet weak var tfConsole: UITextField!
@@ -19,9 +18,7 @@ class AddEditViewController: UIViewController {
     @IBOutlet weak var btCover: UIButton!
     @IBOutlet weak var ivCover: UIImageView!
     
-    
     var game: Game?
-    
     
     // tip. Lazy somente constroi a classe quando for usar
     lazy var pickerView: UIPickerView = {
@@ -31,7 +28,6 @@ class AddEditViewController: UIViewController {
         pickerView.backgroundColor = .white
         return pickerView
     }()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,24 +85,11 @@ class AddEditViewController: UIViewController {
     }
     
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
     @IBAction func AddEditCover(_ sender: UIButton) {
         // para adicionar uma imagem da biblioteca
         print("AddEditCover")
         
-        
         // para adicionar uma imagem da biblioteca
-    
-        
         let alert = UIAlertController(title: "Selecinar capa", message: "De onde você quer escolher a capa?", preferredStyle: .actionSheet)
         
         let libraryAction = UIAlertAction(title: "Biblioteca de fotos", style: .default, handler: {(action: UIAlertAction) in
@@ -197,7 +180,7 @@ class AddEditViewController: UIViewController {
     
 } // fim classe
 
-extension AddEditViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension AddEditGameViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     // UIPickerViewDataSource
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -219,11 +202,9 @@ extension AddEditViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 }
 
 
-extension AddEditViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension AddEditGameViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // tip. implementando os 2 protocols o evento sera notificando apos user selecionar a imagem
-    
-    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         
     }
@@ -243,7 +224,6 @@ extension AddEditViewController: UIImagePickerControllerDelegate, UINavigationCo
         }
         
         dismiss(animated: true, completion: nil)
-        
     }
     
 }
