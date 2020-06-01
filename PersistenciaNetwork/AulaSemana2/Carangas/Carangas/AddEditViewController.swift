@@ -67,67 +67,47 @@ class AddEditViewController: UIViewController {
     
     
     func loadBrands() {
-        
         startLoadingAnimation()
         
-        REST.loadBrands { (brands) in
-            guard let brands = brands else {
-                self.showAlertError(withTitle: "Obter Marcas", withMessage: "Problemas ao tentar recuperar as marcas.", isTryAgain: true, operation: .get_brands)
-                return
-            }
-
+        REST.loadBrands(onComplete: { (brands) in
             // ascending order
             self.brands = brands.sorted(by: {$0.fipe_name < $1.fipe_name})
             
-            DispatchQueue.main.async {
-                // paramos as animacao caso tenha sucesso
-                self.stopLoadingAnimation()
-                self.pickerView.reloadAllComponents()
-            }
+            // paramos as animacao caso tenha sucesso
+            self.stopLoadingAnimation()
+            self.pickerView.reloadAllComponents()
+        }) { (carError) in
+            let error = REST.translateError(carError)
+            self.showAlertError(withTitle: "Obter Marcas", withMessage: error, isTryAgain: true, operation: .get_brands)
         }
+        
     }
     
     // MARK: - IBActions
-    
-    
     fileprivate func saveCar() {
-        
         startLoadingAnimation()
         
-        REST.save(car: car) { (success) in
-            
-            if success {
-                // consegui salvar
-                
-                // note. self.stopLoadingAnimation() eh opcional ser chamado porque
-                // a tela sera notificar
-                
-                self.goBack()
-            } else {
-                // não salvou por algum problema
-                self.showAlertError(withTitle: "Salvar", withMessage: "Problema ao tentar SALVAR.", isTryAgain: true, operation: .add_car)
-            }
-            
+        REST.save(car: car, onComplete: { (sucess) in
+            self.goBack()
+        }) { (carError) in
+            let error = REST.translateError(carError)
+            self.showAlertError(withTitle: "Salvar", withMessage: error, isTryAgain: true, operation: .add_car)
         }
     }
     
     fileprivate func updateCar() {
-        // 2 - edit current car
         startLoadingAnimation()
         
-        REST.update(car: car) { (sucess) in
-            if sucess {
-                self.goBack()
-            } else {
-                self.showAlertError(withTitle: "Editar", withMessage: "Problema ao tentar EDITAR.", isTryAgain: true, operation: .edit_car)
-            }
+        REST.update(car: car, onComplete: { (sucess) in
+            self.goBack()
+        }) { (carError) in
+            let error = REST.translateError(carError)
+            self.showAlertError(withTitle: "Editar", withMessage: error, isTryAgain: true, operation: .edit_car)
         }
     }
     
     @IBAction func addEdit(_ sender: UIButton) {
-        
         if car == nil {
-            // adicionar carro novo
             car = Car()
         }
         
@@ -139,25 +119,16 @@ class AddEditViewController: UIViewController {
         car.price = Double(tfPrice.text!)!
         car.gasType = scGasType.selectedSegmentIndex
         
-        // 1
         if car._id == nil {
-            
             saveCar()
-            
         } else {
             updateCar()
         }
-        
     }
     
     func goBack() {
-        
-        DispatchQueue.main.async {
-            self.navigationController?.popViewController(animated: true)
-        }
-        
+        self.navigationController?.popViewController(animated: true)
     }
-    
     
     @objc func cancel() {
         tfBrand.resignFirstResponder()
@@ -169,54 +140,49 @@ class AddEditViewController: UIViewController {
     }
     
     func startLoadingAnimation() {
-         self.btAddEdit.isEnabled = false
-         self.btAddEdit.backgroundColor = .gray
-         self.btAddEdit.alpha = 0.5
-         self.loading.startAnimating()
-     }
+        self.btAddEdit.isEnabled = false
+        self.btAddEdit.backgroundColor = .gray
+        self.btAddEdit.alpha = 0.5
+        self.loading.startAnimating()
+    }
     
-     func stopLoadingAnimation() {
-         self.btAddEdit.isEnabled = true
-         self.btAddEdit.backgroundColor = UIColor(named: "main")
-         self.btAddEdit.alpha = 1
-         self.loading.stopAnimating()
-     }
-    
-    
+    func stopLoadingAnimation() {
+        self.btAddEdit.isEnabled = true
+        self.btAddEdit.backgroundColor = UIColor(named: "main")
+        self.btAddEdit.alpha = 1
+        self.loading.stopAnimating()
+    }
     
     func showAlertError(withTitle titleMessage: String, withMessage message: String, isTryAgain hasRetry: Bool, operation oper: CarOperationAction) {
-               
+        
         DispatchQueue.main.async {
-            // qualquer operacao
             self.stopLoadingAnimation()
         }
-       
+        
         let alert = UIAlertController(title: titleMessage, message: message, preferredStyle: .actionSheet)
-       
+        
         if hasRetry {
             let tryAgainAction = UIAlertAction(title: "Tentar novamente", style: .default, handler: {(action: UIAlertAction) in
-               
+                
                 switch oper {
-                case .add_car:
-                    // chamar uma funcao de salvar aqui
-                    self.saveCar()
-                case .edit_car:
-                    // chamar uma funcao de editar aqui
-                    self.updateCar()
-                case .get_brands:
-                    // chamar uma funcao de obter marcas aqui
-                    self.loadBrands()
+                    case .add_car:
+                        self.saveCar()
+                    case .edit_car:
+                        self.updateCar()
+                    case .get_brands:
+                        self.loadBrands()
                 }
-               
+                
             })
-            alert.addAction(tryAgainAction)
-           
+            
             let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: {(action: UIAlertAction) in
                 self.goBack()
             })
+            
+            alert.addAction(tryAgainAction)
             alert.addAction(cancelAction)
         }
-       
+        
         DispatchQueue.main.async {
             self.present(alert, animated: true, completion: nil)
         }
@@ -225,21 +191,15 @@ class AddEditViewController: UIViewController {
     
 } // fim da classe
 
-
-
 extension AddEditViewController:UIPickerViewDelegate, UIPickerViewDataSource {
     
     // MARK: - UIPickerViewDelegate
-    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
         let brand = brands[row]
         return brand.fipe_name
     }
     
-    
     // MARK: - UIPickerViewDataSource
-    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }

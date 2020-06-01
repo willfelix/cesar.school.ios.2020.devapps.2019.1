@@ -7,12 +7,11 @@
 //
 
 import UIKit
+import SideMenu
 
 class CarsTableViewController: UITableViewController {
     
-    
     var cars: [Car] = []
-    
     
     var label: UILabel = {
         let label = UILabel()
@@ -30,63 +29,66 @@ class CarsTableViewController: UITableViewController {
         refreshControl?.addTarget(self, action: #selector(loadCars), for: .valueChanged)
         tableView.refreshControl = refreshControl
         
-    }
-    
-    @objc fileprivate func loadCars() {
-        REST.loadCars(onComplete: { (cars) in
-            // sucesso
-            self.cars = cars
-            
-            // precisa recarregar a tableview usando a main UI thread
-            DispatchQueue.main.async {
-                
-                self.label.text = "Não existem carros cadastrados."
-                self.refreshControl?.endRefreshing()
-                
-                self.tableView.reloadData()
-            }
-            
-        }) { (carError) in
-            // falha (algo de errado ocorreu)
-            
-            var response: String = ""
-            
-            switch carError {
-            case .invalidJSON:
-                response = "invalidJSON"
-            case .noData:
-                response = "noData"
-            case .noResponse:
-                response = "noResponse"
-            case .url:
-                response = "JSON inválido"
-            case .taskError(let error):
-                response = "\(error.localizedDescription)"
-            case .responseStatusCode(let code):
-                if code != 200 {
-                    response = "Algum problema com o servidor. :( \nError:\(code)"
-                }
-            }
-            
-            print(response)
-            
-            DispatchQueue.main.async {
-                
-                self.label.text = "Não existem carros cadastrados."
-                self.refreshControl?.endRefreshing()
-                
-                // TODO mostrar uma alerta similar ao implementado na tela AddEditViewController
-            }
-            
-        }
+        self.setupSideMenu()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         loadCars()
     }
     
+    private func setupSideMenu() {
+        // Define the menus
+        SideMenuManager.default.leftMenuNavigationController = storyboard?.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? SideMenuNavigationController
+        
+        // Enable gestures. The left and/or right menus must be set up above for these to work.
+        // Note that these continue to work on the Navigation Controller independent of the View Controller it displays!
+        SideMenuManager.default.addPanGestureToPresent(toView: navigationController!.navigationBar)
+        SideMenuManager.default.addScreenEdgePanGesturesToPresent(toView: view)
+    }
+    
+    @objc fileprivate func loadCars() {
+        REST.loadCars(onComplete: { (cars) in
+            self.cars = cars
+            self.onFinishRequest()
+        }) { (carError) in
+            let response: String = REST.translateError(carError)
+            self.onFinishRequest(errorMessage: response)
+        }
+    }
+    
+    fileprivate func onFinishRequest(errorMessage: String? = nil) {
+        self.refreshControl?.endRefreshing()
+        
+        if errorMessage != nil {
+            self.label.text = errorMessage
+            self.showAlertError(withTitle: "Obter Carros", withMessage: errorMessage!, isTryAgain: true)
+        } else {
+            self.label.text = "Não existem carros cadastrados."
+            self.tableView.reloadData()
+        }
+    }
+    
+    func showAlertError(withTitle titleMessage: String, withMessage message: String, isTryAgain hasRetry: Bool) {
+        let alert = UIAlertController(title: titleMessage, message: message, preferredStyle: .actionSheet)
+        
+        if hasRetry {
+            let tryAgainAction = UIAlertAction(title: "Tentar novamente", style: .default, handler: {(action: UIAlertAction) in
+                self.loadCars()
+            })
+            
+            let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: {(action: UIAlertAction) in
+                DispatchQueue.main.async {
+                    self.navigationController?.popViewController(animated: true)
+                }
+            })
+            
+            alert.addAction(tryAgainAction)
+            alert.addAction(cancelAction)
+        }
+        
+        self.present(alert, animated: true, completion: nil)
+    }
     
     // MARK: - Table view data source
     
@@ -95,78 +97,40 @@ class CarsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        // atribui nossa label para mostrar se tem ou nao dados
         tableView.backgroundView = cars.count == 0 ? label : nil
-                
         return cars.count
-        
     }
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        // Configure the cell...
+
         let car = cars[indexPath.row]
         cell.textLabel?.text = car.name
         cell.detailTextLabel?.text = car.brand
         
         return cell
     }
-    
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    
+
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // 1
+            
             let car = cars[indexPath.row]
             
-            REST.delete(car: car) { (success) in
-                if success {
-                                        
-                    // ATENCAO nao esquecer disso
-                    self.cars.remove(at: indexPath.row)
-                    
-                    DispatchQueue.main.async {
-                        
-                        // Delete the row from the data source
-                        tableView.deleteRows(at: [indexPath], with: .fade)
-                        
-                    }
-                }
+            REST.delete(car: car, onComplete: { (success) in
+                self.cars.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }) { (error) in
+                let error = REST.translateError(error)
+                self.showAlertError(withTitle: "Problema ao Deleter", withMessage: error, isTryAgain: true)
             }
+            
         }
     }
     
+    // MARK: - Navigation
     
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
@@ -176,6 +140,5 @@ class CarsTableViewController: UITableViewController {
         }
         
     }
-     
     
 }
